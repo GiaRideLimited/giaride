@@ -1,4 +1,6 @@
 import React from 'react';
+import google_play from '../assets/google_play.png';
+import appstore from '../assets/appstore.png';
 
 const HeroComponent = ({ heroComponentData }) => {
     return (
@@ -34,17 +36,37 @@ const HeroComponent = ({ heroComponentData }) => {
                             <p className="mt-4 text-lg text-gray-300">{item.description}</p>
 
                             {/* QR Download box */}
-                            <div className="mt-8 inline-flex items-center border border-[#373737] p-4 pr-[50px] rounded-lg">
-                                <img
-                                    src={item.qrImage}
-                                    alt="QR code"
-                                    className="w-20 h-20 flex-shrink-0"
-                                />
-                                <div className="ml-4 text-left">
-                                    <p className="font-semibold">{item.qrDesc2}</p>
-                                    <p className="mt-1 text-sm text-gray-400">{item.qrDesc1}</p>
+                            <div>
+                                <div className="flex items-center space-x-4 my-[40px] md:hidden">
+                                    {/* Wrap each in a flex-1 container if you need padding/margins */}
+                                    <div className="flex-1">
+                                        <img
+                                            src={google_play}
+                                            alt="Google Play"
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                    <div className="flex-1">
+                                        <img
+                                            src={appstore}
+                                            alt="App Store"
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                </div>
+                                <div className="hidden mt-8 md:inline-flex items-center border border-[#373737] p-4 pr-[50px] rounded-lg">
+                                    <img
+                                        src={item.qrImage}
+                                        alt="QR code"
+                                        className="w-20 h-20 flex-shrink-0"
+                                    />
+                                    <div className="ml-4 text-left">
+                                        <p className="font-semibold">{item.qrDesc2}</p>
+                                        <p className="mt-1 text-sm text-gray-400">{item.qrDesc1}</p>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>

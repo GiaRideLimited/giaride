@@ -1,6 +1,8 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
 import download_app_qr_code from '../assets/download_app_qr_code.png';
+import google_play from '../assets/google_play.png';
+import appstore from '../assets/appstore.png';
 
 
 const Footer = () => {
@@ -13,7 +15,27 @@ const Footer = () => {
                         <div className='mb-[50px]'>
                             <img src={Logo} alt="logo" />
                         </div>
-                        <img src={download_app_qr_code} alt="qr code" />
+                        <div>
+                            <div className="flex items-center space-x-4 my-[20px] mt-0 md:hidden">
+                                <div className="flex-1">
+                                    <img
+                                        src={google_play}
+                                        alt="Google Play"
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                                <div className="flex-1">
+                                    <img
+                                        src={appstore}
+                                        alt="App Store"
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+                            </div>
+                            <div className="hidden md:block">
+                            <img src={download_app_qr_code} alt="qr code" />
+                            </div>
+                        </div>
 
                     </div>
 

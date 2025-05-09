@@ -104,7 +104,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col items-center space-y-4 w-full px-8">
+            <div className="flex flex-col space-y-4 w-full px-8">
               <NavLink to="/login" onClick={toggleMobileMenu}>
                 <button className="px-6 py-3 rounded-full bg-[#FFE500] text-black hover:bg-yellow-600 transition-colors w-full">
                   Login

@@ -37,10 +37,25 @@ export default function Hero() {
 
           {/* QR Download box */}
           <div>
-            <div className='flex'>
-              <img src={google_play} alt="googleplay" className=''/>
-              <img src={appstore} alt="appstore" className='object-contain' />
+            <div className="flex items-center space-x-4 my-[40px] md:hidden">
+              {/* Wrap each in a flex-1 container if you need padding/margins */}
+              <div className="flex-1">
+                <img
+                  src={google_play}
+                  alt="Google Play"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex-1">
+                <img
+                  src={appstore}
+                  alt="App Store"
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
+
+
             <div className="hidden mt-8 md:inline-flex items-center border border-[#373737] p-4 rounded-lg">
               <img
                 src={qr_code}
