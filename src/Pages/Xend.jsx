@@ -4,7 +4,7 @@ import xend_hero_img from '../assets/xend_hero_img.png';
 import KeyFeatures from '../components/KeyFeatures';
 import DownloadApp from '../components/DownloadApp';
 
-import truck from '../assets/truck.png';
+import Truck from '../assets/Truck.png';
 import Calendar from '../assets/Calendar.png';
 import HourglassMedium from '../assets/HourglassMedium.png';
 import Sparkle from '../assets/Sparkle.png';
@@ -12,7 +12,7 @@ import HeroComponent from '../components/HeroComponent';
 
 const features = [
     {
-        icon: truck,
+        icon: Truck,
         alt: 'Shared Deliveries',
         title: 'Shared Deliveries',
         description: 'Reduce costs by combining multiple deliveries along the same route.',
