@@ -7,7 +7,7 @@ import KeyFeatures from '../components/KeyFeatures'
 
 import drop_car from '../assets/drop_car.png';
 import drop_arrow from '../assets/drop_arrow.png';
-import vector from '../assets/vector.png';
+import Vector from '../assets/Vector.png';
 import Sparkle from '../assets/Sparkle.png';
 
 import HeroComponent from '../components/HeroComponent';
@@ -20,7 +20,7 @@ const features = [
         description: 'Split costs by sharing a ride with others going the same route.',
     },
     {
-        icon: vector,
+        icon: Vector,
         alt: 'Scheduled Rides',
         title: 'Scheduled Rides',
         description: 'Plan your trips ahead and never be stranded.',

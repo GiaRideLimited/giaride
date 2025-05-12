@@ -7,7 +7,7 @@ import HeroComponent from '../components/HeroComponent';
 
 import drop_car from '../assets/drop_car.png';
 import drop_arrow from '../assets/drop_arrow.png';
-import vector from '../assets/vector.png';
+import Vector from '../assets/Vector.png';
 import Sparkle from '../assets/Sparkle.png';
 
 const features = [
@@ -18,7 +18,7 @@ const features = [
     description: 'Choose from economy cars to luxury rides.',
   },
   {
-    icon: vector,
+    icon: Vector,
     alt: 'Scheduled Rides',
     title: 'Flexible Rental Periods',
     description: 'Hourly, daily, or long-term rentals available.',

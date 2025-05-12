@@ -7,7 +7,7 @@ import HeroComponent from '../components/HeroComponent';
 
 import drop_car from '../assets/drop_car.png';
 import drop_arrow from '../assets/drop_arrow.png';
-import vector from '../assets/vector.png';
+import Vector from '../assets/Vector.png';
 import Sparkle from '../assets/Sparkle.png';
 
 const features = [
@@ -18,7 +18,7 @@ const features = [
     description: 'Save money with a travel deal list based on organization and prize.',
   },
   {
-    icon: vector,
+    icon: Vector,
     alt: 'Scheduled Rides',
     title: 'Flexible Travel Options',
     description: 'Customize your itinerary.',

@@ -7,7 +7,7 @@ import HeroComponent from '../components/HeroComponent';
 
 import errand_clock from '../assets/errand_clock.png';
 import errand_user from '../assets/errand_user.png';
-import path from '../assets/path.png';
+import Path from '../assets/Path.png';
 import Coins from '../assets/Coins.png';
 
 const features = [
@@ -18,7 +18,7 @@ const features = [
     description: 'Request a pickup anytime.',
   },
   {
-    icon: path,
+    icon: Path,
     alt: 'Same-Day Delivery',
     title: 'Multi-Stop Support',
     description: 'Get multiple errands done in one trip.',
