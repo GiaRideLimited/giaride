@@ -7,8 +7,8 @@ import appstore from '../assets/appstore.png';
 
 export default function Hero() {
   return (
-    <section className="bg-black text-white pt-[30px] md:pt-[50px] h-full md:h-screen">
-      <div className="max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row md:items-center md:justify-between">
+    <section className="bg-black text-white pt-[30px] md:py-[70px] h-full">
+      <div className="max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-[50px]">
         {/* Image with polygon border */}
         <div className="md:w-[512px] my-[50px] md:mt-0">
           <div
@@ -26,19 +26,19 @@ export default function Hero() {
         {/* Text content */}
         <div className=" md:w-1/2 ">
           <h1 className="hidden md:block text-[36px] md:text-5xl md:font-bold leading-tight">
-            Where you need to be <br /> when you need to be
+            Experience Smart, Affordable, and Efficient Transportation
+            {/* Where you need to be <br /> when you need to be */}
           </h1>
           <h1 className="md:hidden text-[36px] md:text-5xl font-bold leading-tight">
             Where you need to be, when you need to be
           </h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Let us get you where you want to be without the stress of thinking and planning, we are safe and fast
+          <p className="mt-4 text-[#A6A6A6]">
+            GiaRide is an AI-powered transportation solution designed to save you time and money. Whether you need a ride, want to share a trip, send a package, or rent a vehicle, GiaRide ensures seamless mobility within and outside your city
           </p>
 
           {/* QR Download box */}
           <div>
             <div className="flex items-center space-x-4 my-[40px] md:hidden">
-              {/* Wrap each in a flex-1 container if you need padding/margins */}
               <div className="flex-1">
                 <img
                   src={google_play}
@@ -56,7 +56,7 @@ export default function Hero() {
             </div>
 
 
-            <div className="hidden mt-8 md:inline-flex items-center border border-[#373737] p-4 rounded-lg">
+            <div className="hidden mt-8 md:inline-flex items-center border border-[#373737] p-3 pr-[90px]">
               <img
                 src={qr_code}
                 alt="QR code"

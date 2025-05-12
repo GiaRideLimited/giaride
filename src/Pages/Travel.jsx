@@ -14,40 +14,41 @@ const features = [
   {
     icon: drop_car,
     alt: 'Shared Deliveries',
-    title: 'Wide Selection of Vehicles',
-    description: 'Choose from economy cars to luxury rides.',
+    title: 'Travel Discounts',
+    description: 'Save money with a travel deal list based on organization and prize.',
   },
   {
     icon: vector,
     alt: 'Scheduled Rides',
-    title: 'Flexible Rental Periods',
-    description: 'Hourly, daily, or long-term rentals available.',
+    title: 'Flexible Travel Options',
+    description: 'Customize your itinerary.',
   },
   {
     icon: drop_arrow,
     alt: 'Inter/Intra-City Rides',
-    title: 'Competitive Pricing',
-    description: 'Affordable rates with no hidden fees.',
+    title: 'AI-Powered Trip Planning',
+    description: 'Get recommendations tailored to your preferences.',
   },
-  {
-    icon: Sparkle,
-    alt: 'AI-Optimized Routes',
-    title: 'Easy Booking Process',
-    description: 'Rent a car with just a few clicks.',
-  },
+    {
+      icon: Sparkle,
+      alt: 'AI-Optimized Routes',
+      title: 'Easy Booking Process',
+      description: 'Rent a car with just a few clicks.',
+    },
 ];
 
 
-const button_text = 'Book your rental today!';
+
+const button_text = 'Start your journey with GiaRide Travel!';
 
 
 const heroComponentData = [
     {
         img: hire_car_hero_img,
         alt: 'hire car image',
-        title: 'Find the Perfect Ride for Any Occasion',
+        title: 'Explore, Plan, and Travel with Ease',
         description:
-            'Rent a car, truck, or SUV effortlessly with GiaRide’s car rental service.',
+            'Planning a trip has never been easier. With GiaRide Travel, you can book travel deals, through road, air, water, rail.',
         qrImage: qr_code,
         qrDesc1: 'Download the GiaRide app',
         qrDesc2: 'Scan the QR code to download',

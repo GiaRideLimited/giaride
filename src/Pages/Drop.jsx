@@ -5,39 +5,41 @@ import DownloadApp from '../components/DownloadApp';
 import KeyFeatures from '../components/KeyFeatures'
 
 
-import Truck from '../assets/Truck.png';
-import Calendar from '../assets/Calendar.png';
-import HourglassMedium from '../assets/HourglassMedium.png';
+import drop_car from '../assets/drop_car.png';
+import drop_arrow from '../assets/drop_arrow.png';
+import vector from '../assets/vector.png';
 import Sparkle from '../assets/Sparkle.png';
 
 import HeroComponent from '../components/HeroComponent';
 
 const features = [
     {
-        icon: Truck,
+        icon: drop_car,
         alt: 'Shared Deliveries',
         title: 'Shared Deliveries',
-        description: 'Reduce costs by combining multiple deliveries along the same route.',
+        description: 'Split costs by sharing a ride with others going the same route.',
     },
     {
-        icon: HourglassMedium,
-        alt: 'Same-Day Delivery',
-        title: 'Same-Day Delivery',
-        description: 'Get your package delivered within hours.',
+        icon: vector,
+        alt: 'Scheduled Rides',
+        title: 'Scheduled Rides',
+        description: 'Plan your trips ahead and never be stranded.',
     },
     {
-        icon: Calendar,
-        alt: 'Scheduled Pickups',
-        title: 'Scheduled Pickups',
-        description: 'Book deliveries in advance for better planning.',
+        icon: drop_arrow,
+        alt: 'Inter/Intra-City Rides',
+        title: 'Inter/Intra-City Rides',
+        description: 'Travel within your city or to nearby cities with other people',
     },
     {
         icon: Sparkle,
-        alt: 'AI-Powered Routing',
-        title: 'AI-Powered Routing',
-        description: 'Optimized delivery routes for faster drop-offs.',
+        alt: 'AI-Optimized Routes',
+        title: 'AI-Optimized Routes',
+        description: 'Faster trips with less congestion.',
     },
 ];
+
+const button_text = 'Book your ride now and move smarter!';
 
 
 const heroComponentData = [
@@ -94,7 +96,7 @@ const Drop = () => {
                 </div>
             </section> */}
             <HeroComponent heroComponentData={heroComponentData} />
-            <KeyFeatures features={features} />
+            <KeyFeatures features={features} button_text={button_text} />
             <DownloadApp />
         </div>
     )

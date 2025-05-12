@@ -8,9 +8,9 @@ const HeroComponent = ({ heroComponentData }) => {
             {heroComponentData.map((item, index) => (
                 <section
                     key={index}
-                    className="bg-black text-white pt-[30px] md:pt-[50px] pb-[50px] md:pb-0 h-full md:h-screen"
+                    className="bg-black text-white pt-[30px] md:py-[70px] h-full"
                 >
-                    <div className=" max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row-reverse md:items-center md:justify-between">
+                    <div className=" max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row-reverse md:items-center md:justify-between gap-[50px]">
                         {/* Image with polygon border */}
                         <div className="md:w-[512px]">
                             <div
@@ -33,12 +33,11 @@ const HeroComponent = ({ heroComponentData }) => {
                             <h1 className=" text-[36px] md:text-5xl md:font-bold leading-tight">
                                 {item.title}
                             </h1>
-                            <p className="mt-4 text-lg text-gray-300">{item.description}</p>
+                            <p className="mt-4  text-[#A6A6A6] ">{item.description}</p>
 
                             {/* QR Download box */}
                             <div>
                                 <div className="flex items-center space-x-4 my-[40px] md:hidden">
-                                    {/* Wrap each in a flex-1 container if you need padding/margins */}
                                     <div className="flex-1">
                                         <img
                                             src={google_play}
@@ -54,17 +53,19 @@ const HeroComponent = ({ heroComponentData }) => {
                                         />
                                     </div>
                                 </div>
-                                <div className="hidden mt-8 md:inline-flex items-center border border-[#373737] p-4 pr-[50px] rounded-lg">
+                                <div className="hidden mt-8 md:inline-flex items-center border border-[#373737] p-2 pr-[50px]">
                                     <img
                                         src={item.qrImage}
                                         alt="QR code"
                                         className="w-20 h-20 flex-shrink-0"
                                     />
                                     <div className="ml-4 text-left">
-                                        <p className="font-semibold">{item.qrDesc2}</p>
-                                        <p className="mt-1 text-sm text-gray-400">{item.qrDesc1}</p>
+                                        <p className="font-semibold">{item.qrDesc1}</p>
+                                        <p className="mt-1 text-sm text-[#A6A6A6]">{item.qrDesc2}</p>
                                     </div>
                                 </div>
+
+
                             </div>
 
                         </div>

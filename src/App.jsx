@@ -8,6 +8,7 @@ import ErrandPage from './Pages/ErrandPage';
 import Drop from './Pages/Drop';
 import HireCar from './Pages/HireCar';
 import About from './Pages/About';
+import Travel from './Pages/Travel';
 
 const App = () => {
   return (
@@ -18,10 +19,12 @@ const App = () => {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<HomePage />} />
             <Route path="/xend" element={<Xend />} />
             <Route path="/errand" element={<ErrandPage />} />
             <Route path="/drop" element={<Drop />} />
             <Route path="/hire-car" element={<HireCar />} />
+            <Route path="/travel" element={<Travel />} />
             <Route path="/about" element={<About />} />
           </Routes>
         </div>

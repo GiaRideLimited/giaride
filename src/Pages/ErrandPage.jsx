@@ -5,37 +5,38 @@ import DownloadApp from '../components/DownloadApp';
 import KeyFeatures from '../components/KeyFeatures';
 import HeroComponent from '../components/HeroComponent';
 
-import Truck from '../assets/Truck.png';
-import Calendar from '../assets/Calendar.png';
-import HourglassMedium from '../assets/HourglassMedium.png';
-import Sparkle from '../assets/Sparkle.png';
+import errand_clock from '../assets/errand_clock.png';
+import errand_user from '../assets/errand_user.png';
+import path from '../assets/path.png';
+import Coins from '../assets/Coins.png';
 
 const features = [
-    {
-        icon: Truck,
-        alt: 'Shared Deliveries',
-        title: 'Shared Deliveries',
-        description: 'Reduce costs by combining multiple deliveries along the same route.',
-    },
-    {
-        icon: HourglassMedium,
-        alt: 'Same-Day Delivery',
-        title: 'Same-Day Delivery',
-        description: 'Get your package delivered within hours.',
-    },
-    {
-        icon: Calendar,
-        alt: 'Scheduled Pickups',
-        title: 'Scheduled Pickups',
-        description: 'Book deliveries in advance for better planning.',
-    },
-    {
-        icon: Sparkle,
-        alt: 'AI-Powered Routing',
-        title: 'AI-Powered Routing',
-        description: 'Optimized delivery routes for faster drop-offs.',
-    },
+  {
+    icon: errand_clock,
+    alt: 'Shared Deliveries',
+    title: 'On-Demand or Scheduled Errands',
+    description: 'Request a pickup anytime.',
+  },
+  {
+    icon: path,
+    alt: 'Same-Day Delivery',
+    title: 'Multi-Stop Support',
+    description: 'Get multiple errands done in one trip.',
+  },
+  {
+    icon: errand_user,
+    alt: 'Scheduled Pickups',
+    title: 'Trusted Runners',
+    description: 'Verified personnel for safe and reliable service.',
+  },
+  {
+    icon: Coins,
+    alt: 'AI-Powered Routing',
+    title: 'Cost-Effective Pricing',
+    description: 'Affordable rates to make life easier.',
+  },
 ];
+
 
 const heroComponentData = [
     {
@@ -50,11 +51,13 @@ const heroComponentData = [
     },
 ];
 
+const button_text = 'Request an errand service now!';
+
 const ErrandPage = () => {
     return (
         <div>
             <HeroComponent heroComponentData={heroComponentData} />
-            <KeyFeatures features={features} />
+            <KeyFeatures features={features} button_text={button_text} />
             <DownloadApp />
         </div>
     );

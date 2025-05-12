@@ -49,11 +49,13 @@ const heroComponentData = [
     }
 ];
 
+const button_text = 'Send your package now with GiaRide Xend!';
+
 const Xend = () => {
     return (
         <div>
             <HeroComponent heroComponentData={heroComponentData} />
-            <KeyFeatures features={features} />
+            <KeyFeatures features={features} button_text={button_text} />
             <DownloadApp />
         </div>
     );

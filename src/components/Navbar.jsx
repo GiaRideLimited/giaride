@@ -5,6 +5,7 @@ import logo from '../assets/logo.png'; // Ensure the path is correct
 
 // Define navigation items with label and path
 const navItems = [
+  { label: 'Home', path: '/home' },
   { label: 'Drop', path: '/drop' },
   { label: 'Xend', path: '/xend' },
   { label: 'Errand', path: '/errand' },
@@ -73,12 +74,12 @@ const Navbar = () => {
         {/* Actions (Desktop) */}
         <div className="space-x-4 hidden md:flex text-sm font-medium">
           <NavLink to="/login">
-            <button className="px-6 py-3 rounded-full border border-[#FFE500] text-white hover:bg-yellow-500 hover:text-black transition-colors">
+            <button className="px-6 py-3 rounded-full border border-[#FFE500] text-white  transition-colors">
               Login
             </button>
           </NavLink>
           <NavLink to="/signup">
-            <button className="px-6 py-3 rounded-full bg-[#FFE500] text-black hover:bg-yellow-600 transition-colors">
+            <button className="px-6 py-3 rounded-full bg-[#FFE500] text-black  transition-colors">
               Sign up
             </button>
           </NavLink>
