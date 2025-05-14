@@ -7,7 +7,7 @@ import appstore from '../assets/appstore.png';
 
 export default function Hero() {
   return (
-    <section className="bg-black text-white pt-[30px] md:py-[70px] h-full">
+    <section className="bg-black text-white pt-[30px] md:py-[70px] md:pt-[10px] h-full">
       <div className="max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row md:items-center md:justify-between md:gap-[50px]">
         {/* Image with polygon border */}
         <div className="md:w-[512px] my-[50px]">

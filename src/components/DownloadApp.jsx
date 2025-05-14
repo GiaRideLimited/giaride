@@ -1,8 +1,8 @@
 import React from 'react';
-import download_app_qr_code from '../assets/download_app_qr_code.png';
 import download_app_iphone from '../assets/download_app_iphone.png';
 import google_play from '../assets/google_play.png';
 import appstore from '../assets/appstore.png';
+import white_qr_code from '../assets/white_qr_code.png';
 
 const GiaRideAppSection = () => {
   return (
@@ -36,8 +36,17 @@ const GiaRideAppSection = () => {
               />
             </div>
           </div>
-          <div className="hidden md:flex flex-col items-start gap-4">
-            <img src={download_app_qr_code} />
+        
+          <div className="hidden bg-[#0D0D0D] mt-8 md:inline-flex items-center p-3 rounded-sm pr-[100px]">
+            <img
+              src={white_qr_code}
+              alt="QR code"
+              className=""
+            />
+            <div className="ml-4 text-left">
+              <p className="font-semibold">Download the GiaRide app</p>
+              <p className="mt-1 text-[14px] text-[#A6A6A6]">Scan the QR code to download</p>
+            </div>
           </div>
         </div>
 

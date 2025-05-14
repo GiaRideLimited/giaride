@@ -1,8 +1,8 @@
 import React from 'react';
 import Logo from '../assets/logo.png';
-import download_app_qr_code from '../assets/download_app_qr_code.png';
 import google_play from '../assets/google_play.png';
 import appstore from '../assets/appstore.png';
+import white_qr_code from '../assets/white_qr_code.png';
 
 
 const Footer = () => {
@@ -32,8 +32,16 @@ const Footer = () => {
                                     />
                                 </div>
                             </div>
-                            <div className="hidden md:block">
-                            <img src={download_app_qr_code} alt="qr code" />
+                            <div className="hidden bg-[#0D0D0D] mt-8 md:inline-flex items-center p-3 rounded-sm pr-[100px]">
+                                <img
+                                    src={white_qr_code}
+                                    alt="QR code"
+                                    className=""
+                                />
+                                <div className="ml-4 text-left">
+                                    <p className="font-semibold">Download the GiaRide app</p>
+                                    <p className="mt-1 text-[14px] text-[#A6A6A6]">Scan the QR code to download</p>
+                                </div>
                             </div>
                         </div>
 
@@ -57,20 +65,21 @@ const Footer = () => {
                                 <li>Twitter</li>
                                 <li>Facebook</li>
                                 <li>Instagram</li>
+                                <li>Linkedin</li>
                             </ul>
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-2">Connect with us</h3>
                             <ul className="text-gray-300 space-y-3">
                                 <li>Office GF-06, Mathis Plaza, Kanozou, Lagos, Nigeria.</li>
-                                <li>hello@giaride.app</li>
-                                <li>+2340000000000</li>
+                                <li>hello@giaride.com</li>
+                                <li>08135950393</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div className="text-gray-400 mt-[60px] flex flex-col md:flex-row justify-between md:items-center text-[14px]">
-                    <p>&copy; GiaRide App LTD. | All Rights Reserved 2024</p>
+                    <p>&copy; GiaRide  LTD. | All Rights Reserved 2025</p>
                     <div className="flex gap-4">
                         <p>Terms</p>
                         <p>Privacy Notice</p>
