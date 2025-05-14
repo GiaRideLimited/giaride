@@ -89,9 +89,9 @@ const Navbar = () => {
       {/* Mobile Menu Fullscreen Overlay */}
       {isMobileMenuOpen && (
         <div className="fixed inset-0 right-[1px] bg-black bg-opacity-95 z-40 overflow-y-auto mt-[85px]">
-          <div className="flex flex-col items-center justify-start mt-16 space-y-8 px-4">
+          <div className="flex flex-col items-center justify-start mt-8 space-y-8 px-4">
             <ul className="flex flex-col space-y-6 text-center">
-              {mobileNavItems.map(({ label, path }) => (
+              {navItems.map(({ label, path }) => (
                 <li key={path}>
                   <NavLink
                     to={path}

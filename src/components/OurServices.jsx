@@ -19,7 +19,7 @@ const OurServices = () => {
 
                 {/* First service cards wrapper */}
                 <div className="flex flex-col gap-[24px] md:flex-1">
-                    <div className="bg-white p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
+                    <div className="bg-white p-[16px] md:p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
                         <div className="w-12 h-12 bg-[#FFE500] rounded-full flex items-center justify-center mb-4">
                             <FaCar className="text-black text-xl" />
                         </div>
@@ -33,7 +33,7 @@ const OurServices = () => {
                             Plan description and the benefit it gives goes here
                         </p>
                     </div>
-                    <div className="bg-white p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
+                    <div className="bg-white p-[16px] md:p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
                         <div className="w-12 h-12 bg-[#FFE500] rounded-full flex items-center justify-center mb-4">
                             <FaCar className="text-black text-xl" />
                         </div>
@@ -62,7 +62,7 @@ const OurServices = () => {
 
                 {/* Third placeholder */}
                 <div className="flex flex-col gap-[24px] md:flex-1">
-                    <div className="bg-white p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
+                    <div className="bg-white p-[16px] md:p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
                         <div className="w-12 h-12 bg-[#FFE500] rounded-full flex items-center justify-center mb-4">
                             <FaCar className="text-black text-xl" />
                         </div>
@@ -76,7 +76,7 @@ const OurServices = () => {
                             Plan description and the benefit it gives goes here
                         </p>
                     </div>
-                    <div className="bg-white p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
+                    <div className="bg-white p-[16px] md:p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
                         <div className="w-12 h-12 bg-[#FFE500] rounded-full flex items-center justify-center mb-4">
                             <FaCar className="text-black text-xl" />
                         </div>

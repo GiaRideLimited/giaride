@@ -9,7 +9,7 @@ const KeyFeatures = ({ features, button_text }) => {
 
       <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-start  p-4">
+          <div key={index} className="flex flex-col items-center md:items-start text-center md:text-start p-4">
             <img
               src={feature.icon}
               alt={feature.alt}

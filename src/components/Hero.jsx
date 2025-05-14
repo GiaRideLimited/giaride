@@ -8,9 +8,9 @@ import appstore from '../assets/appstore.png';
 export default function Hero() {
   return (
     <section className="bg-black text-white pt-[30px] md:py-[70px] h-full">
-      <div className="max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-[50px]">
+      <div className="max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row md:items-center md:justify-between md:gap-[50px]">
         {/* Image with polygon border */}
-        <div className="md:w-[512px] my-[50px] md:mt-0">
+        <div className="md:w-[512px] my-[50px]">
           <div
             className="relative w-full overflow-hidden"
             style={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0 80%)' }}
@@ -38,7 +38,7 @@ export default function Hero() {
 
           {/* QR Download box */}
           <div>
-            <div className="flex items-center space-x-4 my-[40px] md:hidden">
+            <div className="flex items-center space-x-4 my-[20px] md:hidden">
               <div className="flex-1">
                 <img
                   src={google_play}

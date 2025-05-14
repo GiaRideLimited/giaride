@@ -8,9 +8,9 @@ const HeroComponent = ({ heroComponentData }) => {
             {heroComponentData.map((item, index) => (
                 <section
                     key={index}
-                    className="bg-black text-white pt-[30px] md:py-[70px] h-full"
+                    className="bg-black text-white pt-[30px] pb-[50px] md:py-[70px] h-full"
                 >
-                    <div className=" max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row-reverse md:items-center md:justify-between gap-[50px]">
+                    <div className=" max-w-[90%] md:max-w-[85%] mx-auto flex flex-col-reverse md:flex-row-reverse md:items-center md:justify-between md:gap-[50px]">
                         {/* Image with polygon border */}
                         <div className="md:w-[512px]">
                             <div
@@ -37,7 +37,7 @@ const HeroComponent = ({ heroComponentData }) => {
 
                             {/* QR Download box */}
                             <div>
-                                <div className="flex items-center space-x-4 my-[40px] md:hidden">
+                                <div className="flex items-center space-x-4 my-[20px] md:hidden">
                                     <div className="flex-1">
                                         <img
                                             src={google_play}
