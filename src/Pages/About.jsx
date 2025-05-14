@@ -57,9 +57,9 @@ const About = () => {
     return (
         <div>
             <HeroComponent heroComponentData={heroComponentData} />
-            <div className='max-w-[77%] mx-auto'>
+            <div className='max-w-[90%] md:max-w-[77%] mx-auto'>
                 <section className="pt-[30px] md:pt-[80px] h-full ">
-                    <div className=" flex  md:items-center md:justify-between gap-[90px]">
+                    <div className=" flex flex-col md:flex-row  md:items-center md:justify-between gap-[30px] md:gap-[90px]">
                         {/* Image with polygon border */}
                         <div className="md:w-[512px]">
                             <div
@@ -75,7 +75,7 @@ const About = () => {
                         </div>
 
                         {/* Text content */}
-                        <div className=" md:flex-1">
+                        <div className="text-center md:text-start md:flex-1">
                             <h1 className="hidden md:block text-[36px] md:text-[40px] md:font-bold leading-tight">
                                 Our Mission
                             </h1>
@@ -90,7 +90,7 @@ const About = () => {
                     </div>
                 </section>
                 <section className="pt-[30px] md:pt-[80px] h-full ">
-                    <div className=" flex flex-row-reverse  md:items-center md:justify-between gap-[90px]">
+                    <div className=" flex flex-col md:flex-row-reverse  md:items-center md:justify-between gap-[30px] md:gap-[90px]">
                         {/* Image with polygon border */}
                         <div className="md:w-[512px]">
                             <div
@@ -106,7 +106,7 @@ const About = () => {
                         </div>
 
                         {/* Text content */}
-                        <div className=" md:flex-1 ">
+                        <div className="text-center md:text-start md:flex-1 ">
                             <h1 className="hidden md:block text-[36px] md:text-[40px] md:font-bold leading-tight">
                                 Our Vision
                             </h1>

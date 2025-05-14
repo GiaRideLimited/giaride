@@ -9,10 +9,13 @@ import Drop from './Pages/Drop';
 import HireCar from './Pages/HireCar';
 import About from './Pages/About';
 import Travel from './Pages/Travel';
+import PrivacyPolicy from './Pages/PrivacyPolicy';
+import ScrollToTop from './Utils/ScrollToTop'; 
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
       <div className="flex flex-col min-h-screen">
         {/* Main content routes */}
@@ -26,6 +29,7 @@ const App = () => {
             <Route path="/hire-car" element={<HireCar />} />
             <Route path="/travel" element={<Travel />} />
             <Route path="/about" element={<About />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </div>
 

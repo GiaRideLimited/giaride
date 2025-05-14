@@ -3,6 +3,7 @@ import Logo from '../assets/logo.png';
 import google_play from '../assets/google_play.png';
 import appstore from '../assets/appstore.png';
 import white_qr_code from '../assets/white_qr_code.png';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -82,7 +83,9 @@ const Footer = () => {
                     <p>&copy; GiaRide  LTD. | All Rights Reserved 2025</p>
                     <div className="flex gap-4">
                         <p>Terms</p>
-                        <p>Privacy Notice</p>
+                        <Link to="/privacy-policy">
+                            <p>Privacy Notice</p>
+                        </Link>
                     </div>
                 </div>
             </div>
