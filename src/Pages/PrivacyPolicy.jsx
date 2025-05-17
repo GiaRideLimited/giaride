@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 
 const privacyPolicySections = [
     {
-        id: 'privacy-1', // Changed for uniqueness across sections
+        id: 'privacy-1',
         title: "1. Introduction",
         content: [
             "Welcome to GiaRide. Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services."
@@ -139,7 +139,7 @@ const termsOfServiceSections = [
         id: 'tos-9',
         title: "9. Governing Law",
         content: [
-            "These terms are governed by the laws of Federal Republic of Nigeria." // As per image text
+            "These terms are governed by the laws of Federal Republic of Nigeria."
         ]
     },
     {
@@ -153,11 +153,31 @@ const termsOfServiceSections = [
 
 
 const LegalPage = () => {
-    // Helper function to render sections, reducing repetition
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const privacyRef = useRef(null);
+    const termsRef = useRef(null);
+
+    const handleNavClick = (ref, isMobile = false) => (e) => {
+        e.preventDefault();
+        if (ref.current) {
+            const offset = 80; // Adjust this offset based on your fixed header height or desired spacing
+            const elementPosition = ref.current.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        }
+        if (isMobile) {
+            setIsMobileMenuOpen(false);
+        }
+    };
+
     const renderSections = (sectionsData) => {
         return sectionsData.map((section) => (
             <section key={section.id} className="mb-6">
-                <h2 className="text-xl text-gray-800">
+                <h2 className="text-lg md:text-xl font-semibold text-gray-800">
                     {section.title}
                 </h2>
                 {section.content.map((item, index) => {
@@ -176,10 +196,11 @@ const LegalPage = () => {
                             </ul>
                         );
                     } else {
+                        // This handles JSX elements like the mailto link
                         return (
-                            <p key={index} className="text-gray-700 leading-relaxed mb-3">
+                            <div key={index} className="text-gray-700 leading-relaxed mb-3">
                                 {item}
-                            </p>
+                            </div>
                         );
                     }
                 })}
@@ -188,56 +209,97 @@ const LegalPage = () => {
     };
 
     return (
-        <div className="">
-            <div className='bg-black h-screen text-white text-center pt-[100px]'>
-                <h1 className='text-[56px] font-semibold '>Privacy Policy</h1>
-                <p className='text-[19px] text-gray-200 font-light mt-3'>Updated 12th May, 2025</p>
+        <div className="bg-gray-50 min-h-screen">
+            {/* Hero Section */}
+            <div className='bg-black text-white text-center py-20 md:py-24 lg:pt-[100px] lg:pb-[calc(400px+50px)]'>
+                <h1 className='text-3xl sm:text-4xl lg:text-[56px] font-semibold px-4'>Privacy Policy & Terms</h1>
+                <p className='text-base sm:text-lg lg:text-[19px] text-gray-200 font-light mt-2 sm:mt-3 px-4'>Updated 12th May, 2025</p>
             </div>
 
-            <div className="min-h-screen bg-white flex font-sans text-gray-800 max-w-[85%] mx-auto -mt-[400px] rounded-[16px] p-[30px]">
-                {/* Sidebar */}
-                <aside className="w-64 p-8 h-screen"> {/* Made sidebar sticky */}
-                    <nav>
+            {/* Content Section (White Card) */}
+            <div className="bg-white font-sans text-gray-800 w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl xl:max-w-[85%] mx-auto
+                           md:rounded-[16px] md:shadow-xl
+                            p-4 sm:p-6 lg:p-[30px]
+                            -mt-[50px] sm:-mt-24 md:-mt-48 lg:-mt-[400px] relative z-10 mb-10">
+
+                {/* Mobile Navigation Toggle */}
+                <div className="md:hidden mb-6 flex justify-between items-center border-b pb-4">
+                    <span className="text-xl font-semibold text-gray-800">Page Sections</span>
+                    <button
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        className="text-gray-700 hover:text-black focus:outline-none p-2"
+                        aria-label="Toggle navigation"
+                        aria-expanded={isMobileMenuOpen}
+                    >
+                        {isMobileMenuOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        ) : (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        )}
+                    </button>
+                </div>
+
+                {/* Mobile Navigation Menu (Dropdown) */}
+                {isMobileMenuOpen && (
+                    <nav className="md:hidden bg-gray-50 p-4 rounded-md shadow mb-6">
                         <ul>
                             <li>
-                                <a href="#privacy-policy" className="block py-1 text-black font-bold hover:text-gray-700">
+                                <a href="#privacy-policy" onClick={handleNavClick(privacyRef, true)} className="block py-2 text-gray-700 hover:text-black font-medium">
                                     Privacy Policy
                                 </a>
                             </li>
                             <li>
-                                <a href="#terms-of-service" className="block py-1 text-gray-500 hover:text-black">
+                                <a href="#terms-of-service" onClick={handleNavClick(termsRef, true)} className="block py-2 text-gray-700 hover:text-black font-medium">
                                     Terms of Service
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                </aside>
+                )}
 
-                {/* Main Content */}
-                <main className="flex-1 p-8 overflow-y-auto max-w-[70%]">
-                    {/* Privacy Policy Section */}
-                    <div id="privacy-policy" className="scroll-mt-20"> {/* Added ID and scroll-margin-top */}
-                        <h1 className="text-3xl font-bold text-gray-900 mb-5">
-                            Privacy Policy
-                        </h1>
-                        {renderSections(privacyPolicySections)}
-                    </div>
+                <div className="flex flex-col md:flex-row md:space-x-8 lg:space-x-12">
+                    {/* Sidebar for Medium+ Screens */}
+                    <aside className="hidden md:block md:w-56 lg:w-64 md:sticky md:top-24 self-start md:h-[calc(100vh-8rem)] md:overflow-y-auto">
+                        <nav>
+                            <p className="text-sm text-gray-500 uppercase tracking-wider mb-3 font-semibold">Sections</p>
+                            <ul>
+                                <li className="mb-1">
+                                    <a href="#privacy-policy" onClick={handleNavClick(privacyRef)} className="block py-2 px-3 rounded-md text-gray-700 hover:bg-gray-100 hover:text-black font-medium">
+                                        Privacy Policy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#terms-of-service" onClick={handleNavClick(termsRef)} className="block py-2 px-3 rounded-md text-gray-700 hover:bg-gray-100 hover:text-black font-medium">
+                                        Terms of Service
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </aside>
 
-                    {/* Divider (optional) */}
-                    <hr className="my-12 border-gray-300" />
+                    {/* Main Content */}
+                    <main className="flex-1 w-full mt-8 md:mt-0">
+                        {/* Privacy Policy Section */}
+                        <div id="privacy-policy" ref={privacyRef} className="scroll-mt-24 md:scroll-mt-28">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">
+                                Privacy Policy
+                            </h1>
+                            {renderSections(privacyPolicySections)}
+                        </div>
 
-                    {/* Terms of Service Section */}
-                    <div id="terms-of-service" className="scroll-mt-20"> {/* Added ID and scroll-margin-top */}
-                        <h1 className="text-3xl font-bold text-gray-900 mb-5">
-                            Terms of Service
-                        </h1>
-                        {renderSections(termsOfServiceSections)}
-                    </div>
-                </main>
+                        <hr className="my-8 md:my-12 border-gray-200" />
+
+                        {/* Terms of Service Section */}
+                        <div id="terms-of-service" ref={termsRef} className="scroll-mt-24 md:scroll-mt-28">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">
+                                Terms of Service
+                            </h1>
+                            {renderSections(termsOfServiceSections)}
+                        </div>
+                    </main>
+                </div>
             </div>
-
         </div>
-
     );
 };
 

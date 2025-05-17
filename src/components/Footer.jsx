@@ -74,7 +74,7 @@ const Footer = () => {
                             <ul className="text-gray-300 space-y-3">
                                 <li>Office GF-06, Mathis Plaza, Kanozou, Lagos, Nigeria.</li>
                                 <li>hello@giaride.com</li>
-                                <li>08135950393</li>
+                                <li>+234 8135950393</li>
                             </ul>
                         </div>
                     </div>
