@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
 
   return (
     <div className="bg-slate-50 py-16 md:py-24">
-      <div className="max-w-[85%] mx-auto ">
+      <div className="max-w-[90%] md:max-w-[85%] mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-black">
             Why Choose GiaRide?
@@ -69,15 +69,15 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           {/* Accordion Section */}
-          <div className="w-2/5">
+          <div className="w-full md:w-1/2 lg:w-2/5">
             <div className="space-y-4">
               {features.map((item, idx) => (
-                <div key={item.id} className=" rounded-lg overflow-hidden transition-all duration-300 ease-in-out">
+                <div key={item.id} className="rounded-lg overflow-hidden transition-all duration-300 ease-in-out">
                   <button
                     type="button"
-                    className="w-full flex justify-between items-center text-left  focus:outline-none focus-visible:ring focus-visible:ring-teal-500 focus-visible:ring-opacity-75 cursor-pointer"
+                    className="w-full flex justify-between items-center text-left focus:outline-none focus-visible:ring focus-visible:ring-teal-500 focus-visible:ring-opacity-75 cursor-pointer"
                     onClick={() => toggleExpand(idx)}
                     aria-expanded={expandedIndex === idx}
                     aria-controls={`feature-content-${item.id}`}
@@ -94,9 +94,9 @@ const WhyChooseUs = () => {
                   <div
                     id={`feature-content-${item.id}`}
                     className="overflow-hidden transition-all duration-500 ease-in-out"
-                    style={{ maxHeight: expandedIndex === idx ? '200px' : '0px' }} // Adjust maxHeight if content is longer
+                    style={{ maxHeight: expandedIndex === idx ? '200px' : '0px' }}
                   >
-                    <p className="px-5 pb-5 pt-2 text-slate-600 text-sm">
+                    <p className="px-3 md:px-5 pb-5 pt-2 text-slate-600 text-sm">
                       {item.content}
                     </p>
                   </div>
@@ -106,14 +106,13 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Image Section */}
-          <div className="w-3/5 mt-10 lg:mt-0">
+          <div className="w-full md:w-1/2 lg:w-3/5 mt-4 md:mt-0">
             <div className="relative flex items-center justify-center">
               <img
                 src={why_choose_us}
                 alt="Illustrative graphic showcasing GiaRide's services and benefits"
-                className="w-full max-w-md lg:max-w-full h-auto object-contain rounded-md "
+                className="w-full max-w-md lg:max-w-full h-auto object-contain rounded-md"
               />
-
             </div>
           </div>
         </div>
