@@ -81,7 +81,7 @@ const OurServices = () => {
                             <FaCar className="text-black text-xl" />
                         </div>
                         <h3 className="text-[16px] font-semibold mb-2">
-                            Drivers App
+                           Errand
                         </h3>
                         <p className="text-gray-600 text-[14px] mb-1">
                             Plan description and the benefit it gives goes here

@@ -57,7 +57,7 @@ const Footer = () => {
                                 <li>Xend</li>
                                 <li>Travel Booking</li>
                                 <li>Hire Car</li>
-                                <li>Drivers App</li>
+                                <li>Errand</li>
                             </ul>
                         </div>
                         <div>

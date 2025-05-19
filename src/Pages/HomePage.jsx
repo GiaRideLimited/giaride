@@ -5,16 +5,18 @@ import EarnMoney from '../components/EarnMoney'
 import WhereYouNeed from '../components/WhereYouNeed'
 import OurServices from '../components/OurServices'
 import DownloadApp from '../components/DownloadApp'
+import WhyChooseUs from '../components/WhyChooseUs'
 
 const HomePage = () => {
   return (
     <div>
-        <Hero />
-        <EarnMoney />
-        <WhereYouNeed />
-        <OurServices />
-        <DownloadApp />
-    </div>  
+      <Hero />
+      <WhyChooseUs />
+      <EarnMoney />
+      <WhereYouNeed />
+      <OurServices />
+      <DownloadApp />
+    </div>
   )
 }
 
