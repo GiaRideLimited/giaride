@@ -27,11 +27,10 @@ const OurServices = () => {
                             Drop
                         </h3>
                         <p className="text-gray-600 text-[14px] mb-1">
+                            Intra/inter-state ride bookings (shared or solo ride)                     </p>
+                        {/* <p className="text-gray-600 text-[14px]">
                             Plan description and the benefit it gives goes here
-                        </p>
-                        <p className="text-gray-600 text-[14px]">
-                            Plan description and the benefit it gives goes here
-                        </p>
+                        </p> */}
                     </div>
                     <div className="bg-white p-[16px] md:p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
                         <div className="w-12 h-12 bg-[#FFE500] rounded-full flex items-center justify-center mb-4">
@@ -41,11 +40,10 @@ const OurServices = () => {
                             Xend
                         </h3>
                         <p className="text-gray-600 text-[14px] mb-1">
+                            Logistics and Delivery of packages (shared or solo delivery) (Coming Soon)                  </p>
+                        {/* <p className="text-gray-600 text-[14px]">
                             Plan description and the benefit it gives goes here
-                        </p>
-                        <p className="text-gray-600 text-[14px]">
-                            Plan description and the benefit it gives goes here
-                        </p>
+                        </p> */}
                     </div>
 
 
@@ -70,25 +68,24 @@ const OurServices = () => {
                             Hire Car
                         </h3>
                         <p className="text-gray-600 text-[14px] mb-1">
+                            Rent a vehicle with or without a driver (Coming soon)                        </p>
+                        {/* <p className="text-gray-600 text-[14px]">
                             Plan description and the benefit it gives goes here
-                        </p>
-                        <p className="text-gray-600 text-[14px]">
-                            Plan description and the benefit it gives goes here
-                        </p>
+                        </p> */}
                     </div>
                     <div className="bg-white p-[16px] md:p-[24px] rounded-[16px] border border-[#E0E0E0] tracking-tight">
                         <div className="w-12 h-12 bg-[#FFE500] rounded-full flex items-center justify-center mb-4">
                             <FaCar className="text-black text-xl" />
                         </div>
                         <h3 className="text-[16px] font-semibold mb-2">
-                           Errand
+                            Errand
                         </h3>
                         <p className="text-gray-600 text-[14px] mb-1">
-                            Plan description and the benefit it gives goes here
+                            Request someone to run errands for you.  (Coming Soon)
                         </p>
-                        <p className="text-gray-600 text-[14px]">
+                        {/* <p className="text-gray-600 text-[14px]">
                             Plan description and the benefit it gives goes here
-                        </p>
+                        </p> */}
                     </div>
                 </div>
 
