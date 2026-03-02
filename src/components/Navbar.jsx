@@ -109,12 +109,12 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex flex-col space-y-4 w-full px-8 max-w-xs mx-auto"> {/* Added max-w-xs for better centering on wider mobile menu */}
-              <NavLink to="/login" onClick={toggleMobileMenu}>
+              <NavLink to="https://giaride-dashboard.netlify.app/" onClick={toggleMobileMenu}>
                 <button className="px-6 py-3 rounded-full bg-[#FFE500] text-black hover:bg-yellow-600 transition-colors w-full">
                   Login
                 </button>
               </NavLink>
-              <NavLink to="/signup" onClick={toggleMobileMenu}>
+              <NavLink to="https://giaride-dashboard.netlify.app/" onClick={toggleMobileMenu}>
                 <button className="px-6 py-3 rounded-full border border-[#FFE500] text-white hover:text-black hover:bg-yellow-500 transition-colors w-full"> {/* Added hover:bg-yellow-500 for better contrast */}
                   Sign up
                 </button>
