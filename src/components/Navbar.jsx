@@ -73,12 +73,13 @@ const Navbar = () => {
         {/* Actions (Large Desktop) */}
         {/* Changed md:flex to lg:flex */}
         <div className="space-x-4 hidden lg:flex text-sm font-medium">
-          <NavLink to="/login">
+          {/* <NavLink to="/login"> */}
+          <NavLink to="https://giaride-dashboard.netlify.app/">
             <button className="px-6 py-3 rounded-full border border-[#FFE500] text-white transition-colors">
               Login
             </button>
           </NavLink>
-          <NavLink to="/signup">
+          <NavLink to="https://giaride-dashboard.netlify.app/">
             <button className="px-6 py-3 rounded-full bg-[#FFE500] text-black transition-colors">
               Sign up
             </button>
